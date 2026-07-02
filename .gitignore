@@ -152,5 +152,10 @@ megatron_output/
 *.pth
 *.pt
 
+# Custom: model weights & large datasets
+models/
+datasets/
+customer_service_lora/output/
+
 # ast template
 ast_index_file.py

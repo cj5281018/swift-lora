@@ -1,0 +1,20 @@
+{
+  "model": "/newHome/20_CJ/Projects/swift/models/Qwen2.5-7B-Instruct",
+  "adapter": "/newHome/20_CJ/Projects/swift/customer_service_lora/output/v2-20260702-183920/checkpoint-400",
+  "local_metrics": {
+    "rouge_l_precision": 0.3671,
+    "rouge_l_recall": 0.2717,
+    "rouge_l_f1": 0.2709,
+    "avg_length_ratio": 1.063,
+    "exact_match_rate": 5.0
+  },
+  "rouge_l_pass": true,
+  "violation_check": {
+    "total_samples": 200,
+    "violation_count": 0,
+    "violation_rate": 0.0,
+    "violation_breakdown": {}
+  },
+  "violation_pass": true,
+  "human_eval_samples": 50
+}

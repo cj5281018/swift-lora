@@ -1,7 +1,8 @@
 """Functionality for CPU offloading of tensors saved for backward pass."""
 import functools
 import torch
-from torch.distributed.fsdp import FSDPModule as FSDP2
+from torch.distributed._composable.fsdp import FSDPModule as FSDP2
+
 from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
 from transformers.trainer_callback import TrainerControl, TrainerState
 from transformers.training_args import TrainingArguments
