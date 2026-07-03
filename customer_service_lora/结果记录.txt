@@ -842,3 +842,54 @@ Traceback (most recent call last):
   File "/home/S18_CJ/.local/lib/python3.10/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 47, in forward
     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 222.00 MiB. GPU 0 has a total capacity of 23.59 GiB of which 24.19 MiB is free. Process 1935814 has 17.72 GiB memory in use. Including non-PyTorch memory, this process has 5.37 GiB memory in use. Of the allocated memory 4.68 GiB is allocated by PyTorch, and 390.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+三、新模型结果
+(ms-swift) S18_CJ@cv:/newHome/20_CJ/Projects/swift/customer_service_lora$ swift infer \
+    --model /newHome/20_CJ/Projects/swift/models/Qwen2.5-7B-Instruct \
+    --adapters output_v2/v0-20260703-120504/checkpoint-1126 \
+    --infer_backend transformers
+run sh: `/newHome/20_CJ/anaconda3/envs/ms-swift/bin/python3.10 /newHome/20_CJ/Projects/swift/swift/cli/infer.py --model /newHome/20_CJ/Projects/swift/models/Qwen2.5-7B-Instruct --adapters output_v2/v0-20260703-120504/checkpoint-1126 --infer_backend transformers`
+[INFO:swift] Successfully registered `/newHome/20_CJ/Projects/swift/swift/dataset/data/dataset_info.json`.
+[INFO:swift] Successfully loaded /newHome/20_CJ/Projects/swift/customer_service_lora/output_v2/v0-20260703-120504/checkpoint-1126/args.json.
+<<< 这款茶具有几个颜色可以选？
+青色和白色的哦
+--------------------------------------------------
+<<< 有没有适合送礼的茶叶礼盒？
+有的哦
+--------------------------------------------------
+<<< 快递什么时候发货，能加急吗？
+72小时内发货可以的哦
+--------------------------------------------------
+<<< 我的订单好几天了怎么还没物流信息？
+帮您催下哦
+--------------------------------------------------
+<<< 衣服掉色可以全额退款吗？
+可以的哦
+--------------------------------------------------
+<<< 收到的杯子碎了，怎么处理？
+退10元差价吗
+--------------------------------------------------
+<<< 我拍错了能不能改地址？
+您这边把正确地址发我下哦
+--------------------------------------------------
+<<< 优惠券下单时忘记用了，能补退差价吗？
+不支持的哦
+--------------------------------------------------
+<<< 你们发货太慢了，我要投诉！
+亲亲实在抱歉呢由于订单量大我们会在48小时左右发出哦
+--------------------------------------------------
+<<< 等了这么久就给我发个坏的，太失望了
+实在抱歉呢亲亲您这边申请下退款哦
+--------------------------------------------------
+<<< 能给我额外补偿优惠券吗？
+这个不行哦
+--------------------------------------------------
+<<< 我不满意，你们得赔我三倍金额
+实在抱歉呢
+--------------------------------------------------
+<<< 帮我查一下这个订单的退款进度
+稍等
+--------------------------------------------------
+<<< 你们公司投诉电话多少？
+96366
+--------------------------------------------------

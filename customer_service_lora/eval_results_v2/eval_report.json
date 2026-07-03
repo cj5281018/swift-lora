@@ -1,0 +1,28 @@
+{
+  "model": "/newHome/20_CJ/Projects/swift/models/Qwen2.5-7B-Instruct",
+  "adapter": "/newHome/20_CJ/Projects/swift/customer_service_lora/output_v2/v0-20260703-120504/checkpoint-1126",
+  "bertscore": {
+    "bertscore_precision": 0.2808,
+    "bertscore_recall": 0.2034,
+    "bertscore_f1": 0.2331
+  },
+  "rouge_l": {
+    "rouge_l_precision": 0.084,
+    "rouge_l_recall": 0.084,
+    "rouge_l_f1": 0.084
+  },
+  "length_stats": {
+    "avg_length_ratio": 1.194,
+    "exact_match_rate": 8.4
+  },
+  "violation_check": {
+    "total_samples": 500,
+    "violation_count": 1,
+    "violation_rate": 0.2,
+    "violation_breakdown": {
+      "承诺退款金额": 1
+    }
+  },
+  "violation_pass": true,
+  "human_eval_samples": 50
+}

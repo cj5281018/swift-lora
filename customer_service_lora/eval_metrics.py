@@ -19,7 +19,7 @@ from pathlib import Path
 
 # ============ 配置 ============
 VAL_FILE = Path("val.jsonl")
-OUTPUT_DIR = Path("eval_results")
+OUTPUT_DIR = Path("eval_results_v3")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 RANDOM_SEED = 42
@@ -268,7 +268,7 @@ def run_inference(val_file: Path, model_path: str, adapter_path: str) -> list[di
 
 def main():
     MODEL_PATH = "/newHome/20_CJ/Projects/swift/models/Qwen2.5-7B-Instruct"
-    ADAPTER_PATH = "/newHome/20_CJ/Projects/swift/customer_service_lora/output/v2-20260702-183920/checkpoint-400"
+    ADAPTER_PATH = "/newHome/20_CJ/Projects/swift/customer_service_lora/output_v3/v0-20260703-163220/checkpoint-2200"
 
     print("=" * 60)
     print("Step 7: 轻量化自动化评估")
