@@ -206,7 +206,7 @@ def run_inference(val_file: Path, model_path: str, adapter_path: str) -> list[di
         model_path,
         quantization_config=quant_config,
         torch_dtype=torch.bfloat16,
-        device_map={"": "cuda:1"},
+        device_map={"": "cuda:0"},
         trust_remote_code=True,
     )
     model = PeftModel.from_pretrained(base_model, adapter_path)
@@ -283,7 +283,7 @@ def main():
 
     # ---- 7.2 BERTScore（语义匹配度）----
     print("\n[7.2] 计算 BERTScore (bert-base-chinese)...")
-    bertscore_result = compute_bertscore(references, predictions, device="cuda:1")
+    bertscore_result = compute_bertscore(references, predictions, device="cuda:0")
 
     print(f"  BERTScore Precision: {bertscore_result['bertscore_precision']:.4f}")
     print(f"  BERTScore Recall:    {bertscore_result['bertscore_recall']:.4f}")

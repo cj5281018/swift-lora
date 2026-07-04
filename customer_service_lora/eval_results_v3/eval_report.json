@@ -1,0 +1,26 @@
+{
+  "model": "/newHome/20_CJ/Projects/swift/models/Qwen2.5-7B-Instruct",
+  "adapter": "/newHome/20_CJ/Projects/swift/customer_service_lora/output_v3/v0-20260703-163220/checkpoint-2200",
+  "bertscore": {
+    "bertscore_precision": 0.5193,
+    "bertscore_recall": 0.4647,
+    "bertscore_f1": 0.4862
+  },
+  "rouge_l": {
+    "rouge_l_precision": 0.247,
+    "rouge_l_recall": 0.2439,
+    "rouge_l_f1": 0.2447
+  },
+  "length_stats": {
+    "avg_length_ratio": 1.1082,
+    "exact_match_rate": 22.0
+  },
+  "violation_check": {
+    "total_samples": 1000,
+    "violation_count": 0,
+    "violation_rate": 0.0,
+    "violation_breakdown": {}
+  },
+  "violation_pass": true,
+  "human_eval_samples": 50
+}
